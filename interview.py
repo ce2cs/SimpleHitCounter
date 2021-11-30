@@ -24,8 +24,8 @@ class Counter:
         # if it is, we add on to the answer,
         # else, we do not add to the answer
         ans = 0
-        for count_timestamp, hit_count in self.count:
-            if count_timestamp > timestamp - 300:
+        for hit_timestamp, hit_count in self.count:
+            if hit_timestamp > timestamp - 300:
                 ans += hit_count
         return ans
 
